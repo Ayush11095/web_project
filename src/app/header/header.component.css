@@ -1,0 +1,9 @@
+.actives{
+    border-top: 4px solid #eb8a2a;
+}
+.nav-item{
+    font-size: 15px;
+}
+.nav-item:hover{
+    border-top: 4px solid #eb8a2a;
+}

@@ -1,0 +1,83 @@
+a{
+    color: black;
+}
+.base{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.buttn{
+    display: inline;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #ffff;
+    background-color: #eb8a2a;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.flex-container > img{
+    background-color: #f1f1f1;
+    margin: 10px;
+    line-height: 50px;
+    text-align: center;
+}
+.cell{
+    padding-bottom: 10px;
+}
+.cell2{
+    margin-top: 10px;
+    float: right;
+}
+.cell1{
+padding-top: 35px;
+}
+.cell1 textarea{
+    height: 90px;
+}
+.list3 li{
+    background-image: url('../../../assets/check.png');
+    list-style: none;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 5px;
+    padding-left: 30px;
+}
+.list2{
+    height: 300px;
+    width: 330px;
+    background: url('../../../assets/benifit-02.jpg');
+    background-repeat: no-repeat;
+}
+.list3{
+    height: 300px;
+    width: 330px;
+    background: url('../../../assets/benifit-03.jpg');
+    background-repeat: no-repeat;
+}
+.sec3{
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-bottom: 0px;
+    padding-top: 0px;
+}
+.sec4{
+    background-image: url('../../../assets/footer.jpg');
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #fff;
+    margin-bottom: 0px;
+    padding-top: 30px;
+}
+.foot{
+    background-color: rgb(32, 29, 29);
+    color: #fff;
+    padding-top: 13px;
+    padding-bottom: 02px;
+    margin-bottom: 0px;
+}
+.sc{
+    background-color: rgb(252, 250, 247);
+}
