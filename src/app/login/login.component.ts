@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-public mytext : string = ''; 
-public name:string='ayush';
   constructor() { }
-
+  email = new FormControl();
+  password = new FormControl();
   ngOnInit(): void {
   }
 

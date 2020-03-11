@@ -38,7 +38,7 @@ padding-top: 35px;
     height: 90px;
 }
 .list3 li{
-    background-image: url('../../assets/check.png');
+    background-image: url('../../../assets/check.png');
     list-style: none;
     background-repeat: no-repeat;
     background-position-x: 0px;
@@ -48,13 +48,13 @@ padding-top: 35px;
 .list2{
     height: 300px;
     width: 330px;
-    background: url('../../assets/benifit-02.jpg');
+    background: url('../../../assets/benifit-02.jpg');
     background-repeat: no-repeat;
 }
 .list3{
     height: 300px;
     width: 330px;
-    background: url('../../assets/benifit-03.jpg');
+    background: url('../../../assets/benifit-03.jpg');
     background-repeat: no-repeat;
 }
 .sec3{
@@ -64,7 +64,7 @@ padding-top: 35px;
     padding-top: 0px;
 }
 .sec4{
-    background-image: url('../../assets/footer.jpg');
+    background-image: url('../../../assets/footer.jpg');
     padding-left: 10%;
     padding-right: 10%;
     color: #fff;

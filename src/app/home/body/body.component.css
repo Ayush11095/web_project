@@ -26,7 +26,7 @@ a{
     }
 } 
 .imgs{
-    background: url('../../assets/banner.jpg');
+    background: url('../../../assets/banner.jpg');
     height: 440px;
     background-repeat: no-repeat;
     margin-bottom: 0px;
@@ -82,7 +82,7 @@ a{
     border: 1px solid #eb8a2a;
 }
 .list1{
-    background: url('../../assets/benifit-01.jpg');
+    background: url('../../../assets/benifit-01.jpg');
     height: 300px;
     width: 330px;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ a{
     padding-left: 11%;
 }
 .list1 li{
-    background-image: url('../../assets/check.png');
+    background-image: url('../../../assets/check.png');
     list-style: none;
     background-repeat: no-repeat;
     background-position-x: 0px;
@@ -108,7 +108,7 @@ a{
     padding-left: 30px;
 }
 .list2 li{
-    background-image: url('../../assets/check.png');
+    background-image: url('../../../assets/check.png');
     list-style: none;
     background-repeat: no-repeat;
     background-position-x: 0px;
@@ -129,7 +129,7 @@ padding-top: 35px;
     height: 90px;
 }
 .list3 li{
-    background-image: url('../../assets/check.png');
+    background-image: url('../../../assets/check.png');
     list-style: none;
     background-repeat: no-repeat;
     background-position-x: 0px;
@@ -139,13 +139,13 @@ padding-top: 35px;
 .list2{
     height: 300px;
     width: 330px;
-    background: url('../../assets/benifit-02.jpg');
+    background: url('../../../assets/benifit-02.jpg');
     background-repeat: no-repeat;
 }
 .list3{
     height: 300px;
     width: 330px;
-    background: url('../../assets/benifit-03.jpg');
+    background: url('../../../assets/benifit-03.jpg');
     background-repeat: no-repeat;
 }
 .sec3{

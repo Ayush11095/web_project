@@ -1,22 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeaderComponent } from './header/header.component'
-import { FooterComponent } from './footer/footer.component'
-import { BodyComponent } from './body/body.component'
 import {DashbordComponent}  from './dashbord.component'
+import { ProductsComponent } from './products/products.component';
+import { UserComponent } from './user/user.component';
+import { ProfileComponent } from './profile/profile.component';
 
-const routes: Routes = [{
-  path:'',component:DashbordComponent
-},
-{
-  path:'',component:HeaderComponent
-},
-{
-  path:'',component:FooterComponent
-},
-{
-  path:'',component:BodyComponent
-}];
+const routes: Routes = [{path:'',component:DashbordComponent},
+{path:'products',component:ProductsComponent},
+{path:'users',component:UserComponent},
+{path:'profile',component:ProfileComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

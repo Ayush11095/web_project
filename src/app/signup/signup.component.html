@@ -1,1 +1,70 @@
-<p>signup works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid" >
+             <div class="col-md-offset-4 col-md-4" id="box">
+              <h2>Contact Us!</h2>
+                <hr>
+                    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form-horizontal" id="contact_form">
+                        <fieldset>
+                            <!-- Form Name -->
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" formControlName="name" required='true' minlength="4" placeholder="Name" class="form-control">
+                                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+                                        <div *ngIf="name.errors.required">
+                                            Name is required.
+                                        </div>
+                                        <div *ngIf="name.errors.minlength">
+                                            Name must be at least 4 characters long.
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- email input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input type="email" formControlName="email" placeholder="E-Mail Address" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                        <input type="password" formControlName="password" placeholder="Enter Password" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button  class="btn btn-danger pull-right">LogIn <span class="glyphicon glyphicon-send"></span></button >
+                                    <button type="submit" class="btn btn-success pull-right">Send <span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+            </div> 
+    </div>
+    </div>
+</body>
+</html>
+{{name.value}}
