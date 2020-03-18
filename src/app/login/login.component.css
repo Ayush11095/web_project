@@ -1,5 +1,5 @@
 body{
-    background-image: radial-gradient(#79a06d, #79a06d);
+    background-image: radial-gradient(rgb(252, 149, 149), rgb(255, 128, 128));
 }
 
 #box{

@@ -11,15 +11,18 @@
     <header class="header">
         <h1 class="logo"><a routerLink="../../dashboard">COLORS</a></h1>
           <ul class="main-nav">
+            <li><a routerLink="../add-product">ADD PRODUCT</a></li>
+            <li><a routerLink="../add-user">ADD USER</a></li>
               <li><a routerLink="../products">PRODUCTS</a></li>
               <li><a routerLink="../users">USER</a></li>
-              <li><a routerLink="./profile">MY PROFILE</a></li>
+              <li><a routerLink="../profile">MY PROFILE</a></li>
               <li><a routerLink="">LOG OUT</a></li>
           </ul>
         </header>
     <div class="card">
         <img src="../../../assets/team2.jpg" alt="Ayush" style="width:100%">
-        <h1>Ayush</h1>
+        <h1>{{name}}</h1>
+        <h5 style="color: #000000;">{{mail}}</h5>
         <p class="title">CEO & Founder</p>
         <p>Harvard University</p>
         <div style="margin: 24px 0;">

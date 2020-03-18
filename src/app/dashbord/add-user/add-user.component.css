@@ -1,45 +1,23 @@
-.card {
-    box-shadow: 0px 8px 8px 8px rgba(255, 128, 128,0.4);
-    max-width: 300px;
-    margin: auto;
-    margin-top: 50px;
-    text-align: center;
-    font-family: arial;
-  }
-  
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
-  
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: rgb(255, 128, 128);
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  .card  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: rgb(255, 128, 128);
-  }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
-  * {
+
+
+#box{
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    background: rgba(200, 200, 200, 0.1);
+    border-radius: 4px;
+    top:50px;
+}
+
+h2{
+    text-align:center;
+    color:#fff;
+}
+* {
 	box-sizing: border-box;
 }
 body {
+    background-image: radial-gradient(rgb(252, 149, 149), rgb(255, 128, 128));
 	font-family: 'Montserrat', sans-serif;
-	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
 }
@@ -49,22 +27,15 @@ ul {
   list-style: none;
 }
 
-
 h2,
 h3,
 a {
-	color: #f8fafc;
+    color: #f8fafc;
 }
-
-a {
-	text-decoration: none;
-}
-
-
 
 .logo {
 	margin: 0;
-	font-size: 1.45em;
+	font-size: 1.65em;
 }
 
 .main-nav {
@@ -73,6 +44,7 @@ a {
 }
 .logo a,
 .main-nav a {
+    text-decoration: none;
 	padding: 10px 15px;
 	text-align: center;
     display: block;
@@ -80,7 +52,7 @@ a {
 
 .main-nav a {
 	color: #f8f9fa;
-    font-size: .99em;
+    font-size: 1.2em;
 }
 
 .main-nav a:hover {

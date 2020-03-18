@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
-
+public name:string
+public mail:string
+  constructor(
+    private cookie:CookieService) { }
   ngOnInit(): void {
+    this.name = this.cookie.get('name')
+    this.mail = this.cookie.get('mail')
+    // alert(cvalue)
   }
-
+  
 }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo"><a routerLink="../../dashboard">COLORS</a></h1>
+          <ul class="main-nav">
+            <li><a routerLink="../add-product">ADD PRODUCT</a></li>
+            <li><a routerLink="./add-user">ADD USER</a></li>
+              <li><a routerLink="../products">PRODUCTS</a></li>
+              <li><a routerLink="../users">USER</a></li>
+              <li><a routerLink="../profile">MY PROFILE</a></li>
+              <li><a routerLink="">LOG OUT</a></li>
+          </ul>
+    </header>
+    <div class="container-fluid" *ngIf="flag; else elseblock">
+        <div class="row-fluid" >
+             <div class="col-md-offset-4 col-md-4" id="box">
+              <h2>Add User!</h2>
+                <hr>
+                    <form [formGroup]="userForm" (ngSubmit)="onRegister(userForm)"  class="form-horizontal" id="contact_form">
+                        <fieldset>
+                            <!-- Form Name -->
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text"  formControlName="firstname" required='true' minlength="3" placeholder="FirstName" class="form-control">
+                                    </div>
+                                    <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" class="alert alert-danger">
+                                        <div *ngIf="firstname.errors.required">
+                                            Name is required!
+                                        </div>
+                                        <div *ngIf="firstname.errors.minlength">
+                                            Name must be at least 3 characters long!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- lastname -->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" formControlName="lastname" required='true' minlength="3" placeholder="LastName" class="form-control">
+                                    </div>
+                                    <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                                        <div *ngIf="lastname.errors.required">
+                                            LastName is required!
+                                        </div>
+                                        <div *ngIf="lastname.errors.minlength">
+                                            Name must be at least 3 characters long!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- email input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input type="email" formControlName="email" required='true' minlength="5" placeholder="E-Mail Address" class="form-control">
+                                    </div>
+                                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                                        <div *ngIf="email.errors.required">
+                                            email is required!
+                                        </div>
+                                        <div *ngIf="email.errors.minlength">
+                                            email must be at least 5 characters long!
+                                        </div>
+                                        <div *ngIf="email.invalid">
+                                            incorrect email!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                                        <input type="password" formControlName="password" required='true' minlength="7" placeholder="Enter Password" class="form-control">
+                                    </div>
+                                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                                        <div *ngIf="password.errors.required">
+                                            password is required!
+                                        </div>
+                                        <div *ngIf="password.errors.minlength">
+                                            password must be at least 7 characters long!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!--Confirm Password input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                                        <input type="password" formControlName="cpassword" required='true' placeholder="Enter Confirm Password" class="form-control">
+                                    </div>
+                                    <div *ngIf="cpassword.invalid && (cpassword.dirty || cpassword.touched)" class="alert alert-danger">
+                                        <div *ngIf="cpassword.errors.required">
+                                            confirm password is required!
+                                        </div>
+                                        <div *ngIf="f.cpassword.errors.mustMatch">Passwords must match</div>
+                                        </div>
+                                </div>
+                            </div>  
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-success pull-right">Submit <span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+            </div> 
+    </div>
+    </div>
+<!-- Update user form -->
+    <ng-template #elseblock>
+    <div class="container-fluid">
+        <div class="row-fluid" >
+             <div class="col-md-offset-4 col-md-4" id="box">
+              <h2>Update User!</h2>
+                <hr>
+                    <form [formGroup]="updateForm" (ngSubmit)="onUpdate(updateForm)"  class="form-horizontal" id="contact_form">
+                        <fieldset>
+                            <!-- Form Name -->
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text"  formControlName="fname" [(ngModel)]="d.firstname" required='true' minlength="3" placeholder="Firstname" class="form-control">
+                                    </div>
+                                    <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert alert-danger">
+                                        <div *ngIf="fname.errors.required">
+                                            Name is required!
+                                        </div>
+                                        <div *ngIf="fname.errors.minlength">
+                                            Name must be at least 3 characters long!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- lastname -->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" formControlName="lname" [(ngModel)]="d.lastname" required='true' minlength="3" placeholder="Lastname" class="form-control">
+                                    </div>
+                                    <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="alert alert-danger">
+                                        <div *ngIf="lname.errors.required">
+                                            LastName is required!
+                                        </div>
+                                        <div *ngIf="lname.errors.minlength">
+                                            Name must be at least 3 characters long!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- email input-->
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input type="email" formControlName="mail" [(ngModel)]="d.email" required='true' minlength="5" placeholder="E-Mail Address" class="form-control">
+                                    </div>
+                                    <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="alert alert-danger">
+                                        <div *ngIf="mail.errors.required">
+                                            email is required!
+                                        </div>
+                                        <div *ngIf="mail.errors.minlength">
+                                            email must be at least 5 characters long!
+                                        </div>
+                                        <div *ngIf="mail.invalid">
+                                            incorrect email!
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-success pull-right">Update <span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                </form>
+        </div> 
+    </div>
+    </div>
+</ng-template>
+</body>
+</html>
